@@ -82,7 +82,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       docker.name = 'ivreweb'
     end
     web.vm.synced_folder "dokuwiki_data", "/var/www/dokuwiki/data"
-    web.vm.network "forwarded_port", guest: 80, host: 80
+    web.vm.network "forwarded_port", guest: 80, host: 5555
   end
 
   # The command line client
